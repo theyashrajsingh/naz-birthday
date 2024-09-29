@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+   margin:0;
+   padding:0;
+   font-family: 'Poppins' , sans-serif;
+   box-sizing: border-box;
+}
+html{
+   scroll-behavior: smooth;
+}
+body{
+      background : #080808;
+      color: white;
+}
+
+#header{
+   width :100%;
+   height: 100vh;
+  /* background-image: url(BACK-GROUND.jpg);
+   background-size: cover;
+   background-position: center;*/
+}
+.container{
+         padding: 10px 10%;
+}
+nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+}
+h1{
+       width: 240px;
+       letter-spacing: 0.2rem;
+    
+}
+h1 span{
+      color:  #ff004f;
+}
+nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+
+}
+
+nav ul li a{
+             color: white;
+             text-decoration: none;
+             font-size: 18px;
+             position: relative;
+
+}
+nav ul li a::after{
+                  content: '';
+                  width :0;
+                  height: 3px;
+                  background: #ff004f;
+                  position:absolute;
+                  left: 0;
+                  bottom: -6px;
+                  transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+                         width :100%;
+}
+
+
+.Love{
+   display:flex;
+   
+   
+
+}
+.header-text{
+   margin-top: 12%;
+   font-size: 30px;
+   width: 45%;
+   
+}
+
+.header-text h1{
+             font-size: 60px;
+             margin-top: 20px;
+}
+.header-text h1 span{
+   color: #ff004f;
+}
+.firstVideo{
+       margin-left: 10px;
+       margin-top: 12%;
+       padding-left: 50px;
+       border-radius: 15%;
+}
+
+         /* ----------------------------------------------------------------------moments-------------------------- */
+
+         #memories{
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        .Birthday-Msg{
+         display: block;
+         padding: 50px;
+         grid-gap:40px;
+         margin-top: 50px;
+        }
+        .Birthday-Msg div{
+         background :#262626;
+         padding :40px;
+         font-size: 13px;
+         font-weight: 300;
+         border-radius: 10px;
+         transition: background 0.5s, transform 0.5s;
+         text-align: center;
+         padding-right: 35px;
+        }
+        .Birthday-Msg div:hover{
+         background: #ff004f;
+         transform:translateY(-10px);
+}
+
+        .memories-list{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-gap:40px;
+            margin-top: 50px;
+        }
+        .memories-list div{
+                   background :#262626;
+                   padding :40px;
+                   font-size: 13px;
+                   font-weight: 300;
+                   border-radius: 10px;
+                   transition: background 0.5s, transform 0.5s;
+                   text-align: center;
+                   padding-right: 35px;
+
+        }
+        .memories-list div i{
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        .memories-list div h4{
+                     font-size: 15px;
+                     font-weight: 500;
+                     margin-bottom: 020px;
+        }
+        .memories-list div a{
+                         text-decoration: none;
+                         color: white;
+                         font-size: 12px;
+                         margin-top: 20px;
+                         display: inline-block;
+        
+        }
+        .memories-list div:hover{
+                          background: #ff004f;
+                          transform:translateY(-10px);
+        }
+        /* ------------------------------------------------ contAct------------------------------------------ */
+ .contact-right{
+         flex-basis: 60%;
+}
+.contact-left p{
+         margin-top: 30px;
+}
+.contact-left p i{
+color:#ff004f;
+margin-right: 15px;
+font-size: 25px;
+}
+.social-icons{
+margin-top: 30px;
+}
+.social-icons a{
+text-decoration: none;
+font-size: 30px;
+margin-right: 15px;
+color: #ababab;
+display: inline-block;
+transition: transform 0.5s;
+}
+.social-icons a:hover{
+color: #ff004f;
+transform: translateY(-5px);
+}
+.btn2{
+display: inline-block;
+background: #ff004f;
+border-radius: 10px;
+}
+.contact-right form{
+width :100%;
+
+}
+form input, form textarea{
+width :100%;
+border: 0;
+outline: none;
+background: #262626;
+padding:15px;
+margin:15px 0;
+color:white;
+font-size: 18px;
+border-radius: 6px;
+}
+form .btn2{
+padding: 14px 60px;
+font-size: 18px;
+margin-top: 20px;
+cursor: pointer;
+}
+.copyright{
+width:100%;
+text-align:center;
+padding: 25px 0;
+background: #262626;
+font-weight: 300;
+margin-top: 80px;
+}
+
+/* <!-- ----------------------------------------      css of small screen ------------------------------- --> */
+
+nav .fa-solid{
+   display: none;
+
+}
+
+
+
+
+@media only screen and (max-width: 600px){
+              
+
+
+               #header{
+               width :100%;
+                height: 50vh;
+    
+              }
+             
+   
+               .header-text{
+                margin-top: 50px ;
+                font-size:1rem;
+              }
+              .header-text h1{
+               font-size: 2.5rem;
+              }
+              .firstVideo{
+                            width:340px;
+              }
+              nav .fa-solid{
+               display: block;
+               font-size: 25px;
+              }
+              nav ul{
+                   background :#ff004f;
+                   position: fixed;
+                   top:0;
+                   right: -200px;
+                   width: 200px;
+                   height: 100vh;
+                   padding-top: 50px;
+                   z-index:2;
+                   transition: right 0.5s;
+              }
+              nav ul li{
+               display: block;
+               margin: 25px;
+
+              }
+              nav ul .fa-solid{
+               position: absolute;
+               top:25px;
+               left:25px;
+               cursor : pointer;
+              }
+              .sub-titles{
+               font-size: 40px;
+              }
+              .about{
+               display: inline;
+               width: 100%;
+              }
+              .Birthday-Msg{
+               margin-top: 55px;
+              }
+             .Birthday-Msg div{
+                             width: 300px;
+                     }
+              
+              .tab-links{
+                font-size: 16px;
+                margin-right: 20px;
+              }
+              .contact-left, .contact-right{
+               flex-basis: 100%;
+              }
+              .copyright{
+               font-size: 14px;
+              }
+
+}
+
+#msg{
+
+   color: #61b752;
+   margin-top: -80px;
+   display: block;
+}

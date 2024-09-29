@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Nazy</title>
+    <link rel="stylesheet" href="birthday.css">
+    <script src="https://kit.fontawesome.com/f69ee4d1be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1><span>N</span>AAZ</h1>
+                <ul id ="sidemenu">
+                    
+                    <li><a href ="#Love"> Love </a></li>
+                    <li><a href ="#memories">Memories</a></li>
+                    <li><a href ="surprise.html">Surprise</a></li>
+                    <li><a href ="#message-love">Message</a></li>
+
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+         <div class="Love">
+            <div class="header-text">
+                
+                <h1>Happy Birthday <span>Nazy</span><br></h1>
+            </div>
+            <div class="firstVideo">
+                <video src="Finalhead.mp4" controls autoplay width="50%"> </video>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="memories">
+        <div class="container">
+            <div class="Birthday-Msg">
+                <div class="inner-text">
+                   <p>Happy Birthday, my love! Today is all about celebrating you the amazing, beautiful and incredible person who has filled my life with so much love and I am beyond grateful for every moment we share. Yor smile brightens my darkest days , and your love makes my heart full.
+                    i can't imagine my life without you by my side. You are my best friend and my love i promise to always be here for you,through every up and down and to cherish every day we have together.
+                    May this birthday bring you as much joy and love as you bring into my life. Here is to celebrate not just today but every day that i get to call you mine. I love you endlessly and I can't wait for all the amazing memories we have yet to make. Aur Yash toh mai duniyaaan ke liye hoon Ashh hmesa tmhara rahega.<br> Happy Birthday, Nazy
+                   </p>
+                 </div>
+                </div>
+                
+            
+            <h1 class="sub-titles">Memories</h1>
+            <div class="memories-list">
+                <div>
+                     <H4>Bhubaneswar Dairies</H4>
+                    <video src="bbsr.mp4" controls width="200px" > </video>
+                </div>
+                <div>
+                    <H4>Jaipur Dairies</H4>
+                    <video src="finalJaipur.mp4" controls  width="200px" > </video>
+                </div>
+                <div>
+                <H4>EID Dairies</H4>
+                    <video src="EID.mp4" controls  width="200px" > </video>
+                </div>
+            </div>
+
+            <div class="memories-list">
+                <div>
+                <H4>Kasol Dairies</H4>
+                    <video src="KASOL.mp4" controls width="200px"  > </video>
+                </div>
+                <div>
+                <H4>Muzaffarpur Dairies</H4>
+                    <video src="MFP.mp4" controls  width="240px"  > </video>
+                </div>
+                <div>
+                    <H4> Kolkata Dairies</H4>
+                    <video src="fINALKOLKATA.mp4" controls  width="200px" > </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="message-love">
+        <div class="container">
+            <div class="row">
+                
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <h2>Hey Birthday Girl!</h2>
+                        
+                        <textarea name ="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Love</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+       
+     
+    </div>
+    <div class="copyright">
+        <p>Copyright © Made with ❤️ by Ashh </p>
+    </div>
+
+     <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+
+<script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzNSKF_H8hezgw2jiDwKW8rRwrVpmYHaY4iy2cTZ2J74BiLE4fcEb8aECn6ZsWwVPYs/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {msg.innerHTML = "Message Sent To Ashh"
+        setTimeout(function(){
+                  msg.innerHTML =""
+        }, 5000)
+        form.reset()
+       })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
